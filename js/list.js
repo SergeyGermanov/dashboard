@@ -1,9 +1,11 @@
 let colorFunc = (num) => {
   return num >= 0 && num <= 2
     ? "danger"
-    : num >= 3 && num <= 4
+    : num >= 3 && num <= 5
     ? "warning"
-    : "success";
+    : num >= 6 && num <= 7
+    ? "success"
+    : "dark";
 };
 
 let listComponent = (div, name, num, ind) => {
