@@ -27,8 +27,6 @@ let progressComponent = (div, num) => {
                             ${num}
                         </div>
                     </div>`;
+  document.querySelector(`#${div}`).innerHTML = "";
   document.querySelector(`#${div}`).appendChild(bar);
 };
-
-progressComponent("progressbarQuarter", 55);
-progressComponent("progressbarMonth", 5);

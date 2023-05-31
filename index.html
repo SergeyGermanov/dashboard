@@ -34,18 +34,22 @@
                           >
                             <div class="card-header">Delivered</div>
                             <div class="card-body">
-                              <h1 class="card-text">22</h1>
+                              <h1 class="card-text" id="deliveredNumberMonth">
+                                0
+                              </h1>
                             </div>
                           </div>
                         </div>
                         <div class="col">
                           <div
-                            class="card text-bg-primary mb-3"
+                            class="card text-bg-light mb-3"
                             style="max-width: 18rem"
                           >
                             <div class="card-header">Planned</div>
                             <div class="card-body">
-                              <h1 class="card-text">38</h1>
+                              <h1 class="card-text" id="plannedNumberMonth">
+                                0
+                              </h1>
                             </div>
                           </div>
                         </div>
@@ -78,7 +82,7 @@
             <div class="p-3">
               <!-- q card start -->
               <div class="card">
-                <div class="card-header">Q2 (April - June)</div>
+                <div class="card-header" id="quarterTitle">Quarter</div>
                 <!-- Q body starts -->
                 <div class="card-body">
                   <blockquote class="blockquote mb-0">
@@ -86,12 +90,14 @@
                       <div class="row">
                         <div class="col">
                           <div
-                            class="card text-bg-danger mb-3"
+                            class="card text-bg-primary mb-3"
                             style="max-width: 18rem"
                           >
                             <div class="card-header">Delivered</div>
                             <div class="card-body">
-                              <h1 class="card-text">39</h1>
+                              <h1 class="card-text" id="deliveredNumberQuarter">
+                                0
+                              </h1>
                             </div>
                           </div>
                         </div>
@@ -102,7 +108,9 @@
                           >
                             <div class="card-header">Planned</div>
                             <div class="card-body">
-                              <h1 class="card-text">96</h1>
+                              <h1 class="card-text" id="plannedNumberQuarter">
+                                0
+                              </h1>
                             </div>
                           </div>
                         </div>
@@ -135,19 +143,21 @@
 
       <!-- form starts -->
       <div class="container px-4 text-center">
-        <form class="row g-3">
+        <form name="dashboard-form" action="#" class="row g-3">
           <div class="col-md-6">
             <div class="input-group">
               <span class="input-group-text">Andrew</span>
               <input
-                type="text"
-                aria-label="Andrew-Month"
+                required
+                type="number"
+                name="andrewMonth"
                 class="form-control"
                 placeholder="Month Delivery"
               />
               <input
-                type="text"
-                aria-label="Andrew-Quarter"
+                required
+                type="number"
+                name="andrewQuarter"
                 class="form-control"
                 placeholder="Quater Delivery"
               />
@@ -157,14 +167,16 @@
             <div class="input-group">
               <span class="input-group-text">Chiraag</span>
               <input
-                type="text"
-                aria-label="Chiraag-Month"
+                required
+                type="number"
+                name="chiraagMonth"
                 class="form-control"
                 placeholder="Month Delivery"
               />
               <input
-                type="text"
-                aria-label="Chiraag-Quarter"
+                required
+                type="number"
+                name="chiraagQuarter"
                 class="form-control"
                 placeholder="Quater Delivery"
               />
@@ -174,14 +186,16 @@
             <div class="input-group">
               <span class="input-group-text">Louis</span>
               <input
-                type="text"
-                aria-label="Louis-Month"
+                required
+                type="number"
+                name="louisMonth"
                 class="form-control"
                 placeholder="Month Delivery"
               />
               <input
-                type="text"
-                aria-label="Louis-Quarter"
+                required
+                type="number"
+                name="louisQuarter"
                 class="form-control"
                 placeholder="Quater Delivery"
               />
@@ -192,14 +206,16 @@
             <div class="input-group">
               <span class="input-group-text">Mehul</span>
               <input
-                type="text"
-                aria-label="Mehul-Month"
+                required
+                type="number"
+                name="mehulMonth"
                 class="form-control"
                 placeholder="Month Delivery"
               />
               <input
-                type="text"
-                aria-label="Mehul-Quarter"
+                required
+                type="number"
+                name="mehulQuarter"
                 class="form-control"
                 placeholder="Quater Delivery"
               />
@@ -209,14 +225,16 @@
             <div class="input-group">
               <span class="input-group-text">Michael</span>
               <input
-                type="text"
-                aria-label="Michael-Month"
+                required
+                type="number"
+                name="michaelMonth"
                 class="form-control"
                 placeholder="Month Delivery"
               />
               <input
-                type="text"
-                aria-label="Michael-Quarter"
+                required
+                type="number"
+                name="michaelQuarter"
                 class="form-control"
                 placeholder="Quater Delivery"
               />
@@ -226,14 +244,16 @@
             <div class="input-group">
               <span class="input-group-text">Rahul</span>
               <input
-                type="text"
-                aria-label="Rahul-Month"
+                required
+                type="number"
+                name="rahulMonth"
                 class="form-control"
                 placeholder="Month Delivery"
               />
               <input
-                type="text"
-                aria-label="Rahul-Quarter"
+                required
+                type="number"
+                name="rahulQuarter"
                 class="form-control"
                 placeholder="Quater Delivery"
               />
@@ -243,14 +263,16 @@
             <div class="input-group">
               <span class="input-group-text">Shanice</span>
               <input
-                type="text"
-                aria-label="Shanice-Month"
+                required
+                type="number"
+                name="shaniceMonth"
                 class="form-control"
                 placeholder="Month Delivery"
               />
               <input
-                type="text"
-                aria-label="Shanice-Quarter"
+                required
+                type="number"
+                name="shaniceQuarter"
                 class="form-control"
                 placeholder="Quater Delivery"
               />
@@ -260,14 +282,16 @@
             <div class="input-group">
               <span class="input-group-text">Savy</span>
               <input
-                type="text"
-                aria-label="Savy-Month"
+                required
+                type="number"
+                name="savyMonth"
                 class="form-control"
                 placeholder="Month Delivery"
               />
               <input
-                type="text"
-                aria-label="Savy-Quarter"
+                required
+                type="number"
+                name="savyQuarter"
                 class="form-control"
                 placeholder="Quater Delivery"
               />
@@ -276,10 +300,34 @@
 
           <div class="col-md-6">
             <div class="input-group">
+              <input
+                required
+                type="number"
+                name="plannedNumberMonth"
+                class="form-control"
+                placeholder="Planned Number for a Month"
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="input-group">
+              <input
+                required
+                type="number"
+                name="plannedNumberQuarter"
+                class="form-control"
+                placeholder="Planned Number for a Quarter"
+              />
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="input-group">
               <span class="input-group-text">End date for a Quarter</span>
               <input
+                required
                 type="date"
-                aria-label="Date-Quarter"
+                name="endDateQuarter"
                 class="form-control"
               />
             </div>
@@ -288,7 +336,9 @@
           <div class="col-md-6">
             <div class="input-group">
               <input
+                required
                 type="text"
+                name="quarterNumber"
                 class="form-control"
                 placeholder="Quarter Number (Months)"
               />
@@ -296,7 +346,9 @@
           </div>
 
           <div class="col-12">
-            <button type="submit" class="btn btn-primary">Update</button>
+            <button type="submit" name="submit" class="btn btn-primary">
+              Update
+            </button>
           </div>
         </form>
       </div>
@@ -308,8 +360,9 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="./js/script.js"></script>
+    <script src="./js/form.js"></script>
     <script src="./js/list.js"></script>
     <script src="./js/progressBar.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

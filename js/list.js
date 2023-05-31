@@ -21,17 +21,6 @@ let listComponent = (div, name, num, ind) => {
                       <span class="badge text-bg-${colorFunc(
                         num
                       )} rounded-pill">${num}</span>`;
+
   document.querySelector(`#${div}`).appendChild(list);
 };
-
-engineers
-  .sort((a, b) => b.connectionsMonth - a.connectionsMonth)
-  .map((el, ind) => {
-    listComponent("monthTop", el.name, el.connectionsMonth, ind);
-  });
-
-engineers
-  .sort((a, b) => b.connectionsQuarter - a.connectionsQuarter)
-  .map((el, ind) => {
-    listComponent("quarterTop", el.name, el.connectionsQuarter, ind);
-  });
