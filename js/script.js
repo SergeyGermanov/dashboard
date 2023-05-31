@@ -53,7 +53,7 @@ let addDataToObj = (data1, data2) => {
     }
     if (o.name === "Louis") {
       data1[i].connectionsMonth = data2.louisMonth;
-      data1[i].connectionsQuarter = data2.louisMonth;
+      data1[i].connectionsQuarter = data2.louisQuarter;
     }
     if (o.name === "Mehul") {
       data1[i].connectionsMonth = data2.mehulMonth;
