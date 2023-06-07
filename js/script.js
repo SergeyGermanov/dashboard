@@ -138,7 +138,7 @@ let datesBetween = (date) => {
 
 let endOfMonthDate = () => {
   let today = new Date();
-  return new Date(today.getFullYear(), today.getMonth() + 1, 0);
+  return new Date(today.getFullYear(), today.getMonth() + 1, 0,12);
 };
 
 dates(new Date());
