@@ -99,18 +99,45 @@ let dates = (date) => {
   document.querySelector("#monthHeader").innerHTML = name;
 };
 
-let deliveredMonth = (arr) => {
-  document.querySelector("#deliveredNumberMonth").textContent = arr.reduce(
+let deliveredMonth = (arr, num) => {
+  let sumConnectionsMonth = arr.reduce(
     (a, b) => a + Number(b.connectionsMonth),
     0
   );
+  let percentLeft = sumConnectionsMonth / num;
+  let color =
+    percentLeft <= 0.33
+      ? "danger"
+      : percentLeft > 0.33 && percentLeft <= 0.66
+      ? "warning"
+      : "success";
+  document.querySelector(
+    "#deliveredNumberMonthCard"
+  ).className = `card text-bg-${color} mb-3`;
+  document.querySelector("#deliveredNumberMonth").textContent =
+    sumConnectionsMonth;
 };
 
-let deliveredNumberQuarter = (arr) => {
-  document.querySelector("#deliveredNumberQuarter").textContent = arr.reduce(
+let deliveredNumberQuarter = (arr, num) => {
+  let sumConnectionsQuarter = arr.reduce(
     (a, b) => a + Number(b.connectionsQuarter),
     0
   );
+
+  let percentLeft = sumConnectionsQuarter / num;
+  let color =
+    percentLeft <= 0.33
+      ? "danger"
+      : percentLeft > 0.33 && percentLeft <= 0.66
+      ? "warning"
+      : "success";
+  document.querySelector(
+    "#deliveredNumberQuarterCard"
+  ).className = `card text-bg-${color} mb-3`;
+  document.querySelector("#deliveredNumberQuarter").textContent =
+    sumConnectionsQuarter;
+
+  id = "deliveredNumberQuarterCard";
 };
 
 let plannedNumberMonth = (num) => {
@@ -138,7 +165,7 @@ let datesBetween = (date) => {
 
 let endOfMonthDate = () => {
   let today = new Date();
-  return new Date(today.getFullYear(), today.getMonth() + 1, 0,12);
+  return new Date(today.getFullYear(), today.getMonth() + 1, 0, 12);
 };
 
 dates(new Date());
@@ -163,15 +190,9 @@ let updateFunction = () => {
   // add and sort month list
 
   // update the number delivered for a month
-  deliveredMonth(engineers);
+  deliveredMonth(engineers, dataForm.plannedNumberMonth);
   // update the number delivered for a quarter
-  deliveredNumberQuarter(engineers);
-
-  // add and sort month list
-  // engineers.map((el) => {
-  //   el.connectionsMonth = 0;
-  //   el.connectionsQuarter = 0;
-  // });
+  deliveredNumberQuarter(engineers, dataForm.plannedNumberQuarter);
 
   document.querySelector("#monthTop").innerHTML = "";
   engineers

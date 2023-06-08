@@ -31,6 +31,7 @@
                           <div
                             class="card text-bg-warning mb-3"
                             style="max-width: 18rem"
+                            id="deliveredNumberMonthCard"
                           >
                             <div class="card-header">Delivered</div>
                             <div class="card-body">
@@ -92,6 +93,7 @@
                           <div
                             class="card text-bg-primary mb-3"
                             style="max-width: 18rem"
+                            id="deliveredNumberQuarterCard"
                           >
                             <div class="card-header">Delivered</div>
                             <div class="card-body">
@@ -139,219 +141,265 @@
             </div>
           </div>
         </div>
+        <!-- Button trigger modal -->
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#modal"
+          id="modalBtn"
+        >
+          Update
+        </button>
       </div>
 
-      <!-- form starts -->
-      <div class="container px-4 text-center">
-        <form name="dashboard-form" action="#" class="row g-3">
-          <div class="col-md-6">
-            <div class="input-group">
-              <span class="input-group-text">Andrew</span>
-              <input
-                required
-                type="number"
-                name="andrewMonth"
-                class="form-control"
-                placeholder="Month Delivery"
-              />
-              <input
-                required
-                type="number"
-                name="andrewQuarter"
-                class="form-control"
-                placeholder="Quater Delivery"
-              />
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="input-group">
-              <span class="input-group-text">Chiraag</span>
-              <input
-                required
-                type="number"
-                name="chiraagMonth"
-                class="form-control"
-                placeholder="Month Delivery"
-              />
-              <input
-                required
-                type="number"
-                name="chiraagQuarter"
-                class="form-control"
-                placeholder="Quater Delivery"
-              />
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="input-group">
-              <span class="input-group-text">Louis</span>
-              <input
-                required
-                type="number"
-                name="louisMonth"
-                class="form-control"
-                placeholder="Month Delivery"
-              />
-              <input
-                required
-                type="number"
-                name="louisQuarter"
-                class="form-control"
-                placeholder="Quater Delivery"
-              />
-            </div>
-          </div>
+      <!-- Modal starts -->
 
-          <div class="col-md-6">
-            <div class="input-group">
-              <span class="input-group-text">Mehul</span>
-              <input
-                required
-                type="number"
-                name="mehulMonth"
-                class="form-control"
-                placeholder="Month Delivery"
-              />
-              <input
-                required
-                type="number"
-                name="mehulQuarter"
-                class="form-control"
-                placeholder="Quater Delivery"
-              />
+      <div
+        class="modal fade"
+        id="modal"
+        tabindex="-1"
+        aria-labelledby="modal"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5">Add the necessary data below</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="input-group">
-              <span class="input-group-text">Michael</span>
-              <input
-                required
-                type="number"
-                name="michaelMonth"
-                class="form-control"
-                placeholder="Month Delivery"
-              />
-              <input
-                required
-                type="number"
-                name="michaelQuarter"
-                class="form-control"
-                placeholder="Quater Delivery"
-              />
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="input-group">
-              <span class="input-group-text">Rahul</span>
-              <input
-                required
-                type="number"
-                name="rahulMonth"
-                class="form-control"
-                placeholder="Month Delivery"
-              />
-              <input
-                required
-                type="number"
-                name="rahulQuarter"
-                class="form-control"
-                placeholder="Quater Delivery"
-              />
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="input-group">
-              <span class="input-group-text">Shanice</span>
-              <input
-                required
-                type="number"
-                name="shaniceMonth"
-                class="form-control"
-                placeholder="Month Delivery"
-              />
-              <input
-                required
-                type="number"
-                name="shaniceQuarter"
-                class="form-control"
-                placeholder="Quater Delivery"
-              />
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="input-group">
-              <span class="input-group-text">Savy</span>
-              <input
-                required
-                type="number"
-                name="savyMonth"
-                class="form-control"
-                placeholder="Month Delivery"
-              />
-              <input
-                required
-                type="number"
-                name="savyQuarter"
-                class="form-control"
-                placeholder="Quater Delivery"
-              />
-            </div>
-          </div>
+            <div class="modal-body">
+              <!-- form start-->
+              <div class="container px-4 text-center">
+                <form name="dashboard-form" action="#" class="row g-3">
+                  <div class="col-md-6">
+                    <div class="input-group">
+                      <span class="input-group-text">Andrew</span>
+                      <input
+                        required
+                        type="number"
+                        name="andrewMonth"
+                        class="form-control"
+                        placeholder="Month Delivery"
+                      />
+                      <input
+                        required
+                        type="number"
+                        name="andrewQuarter"
+                        class="form-control"
+                        placeholder="Quater Delivery"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="input-group">
+                      <span class="input-group-text">Chiraag</span>
+                      <input
+                        required
+                        type="number"
+                        name="chiraagMonth"
+                        class="form-control"
+                        placeholder="Month Delivery"
+                      />
+                      <input
+                        required
+                        type="number"
+                        name="chiraagQuarter"
+                        class="form-control"
+                        placeholder="Quater Delivery"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="input-group">
+                      <span class="input-group-text">Louis</span>
+                      <input
+                        required
+                        type="number"
+                        name="louisMonth"
+                        class="form-control"
+                        placeholder="Month Delivery"
+                      />
+                      <input
+                        required
+                        type="number"
+                        name="louisQuarter"
+                        class="form-control"
+                        placeholder="Quater Delivery"
+                      />
+                    </div>
+                  </div>
 
-          <div class="col-md-6">
-            <div class="input-group">
-              <input
-                required
-                type="number"
-                name="plannedNumberMonth"
-                class="form-control"
-                placeholder="Planned Number for a Month"
-              />
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="input-group">
-              <input
-                required
-                type="number"
-                name="plannedNumberQuarter"
-                class="form-control"
-                placeholder="Planned Number for a Quarter"
-              />
-            </div>
-          </div>
+                  <div class="col-md-6">
+                    <div class="input-group">
+                      <span class="input-group-text">Mehul</span>
+                      <input
+                        required
+                        type="number"
+                        name="mehulMonth"
+                        class="form-control"
+                        placeholder="Month Delivery"
+                      />
+                      <input
+                        required
+                        type="number"
+                        name="mehulQuarter"
+                        class="form-control"
+                        placeholder="Quater Delivery"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="input-group">
+                      <span class="input-group-text">Michael</span>
+                      <input
+                        required
+                        type="number"
+                        name="michaelMonth"
+                        class="form-control"
+                        placeholder="Month Delivery"
+                      />
+                      <input
+                        required
+                        type="number"
+                        name="michaelQuarter"
+                        class="form-control"
+                        placeholder="Quater Delivery"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="input-group">
+                      <span class="input-group-text">Rahul</span>
+                      <input
+                        required
+                        type="number"
+                        name="rahulMonth"
+                        class="form-control"
+                        placeholder="Month Delivery"
+                      />
+                      <input
+                        required
+                        type="number"
+                        name="rahulQuarter"
+                        class="form-control"
+                        placeholder="Quater Delivery"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="input-group">
+                      <span class="input-group-text">Shanice</span>
+                      <input
+                        required
+                        type="number"
+                        name="shaniceMonth"
+                        class="form-control"
+                        placeholder="Month Delivery"
+                      />
+                      <input
+                        required
+                        type="number"
+                        name="shaniceQuarter"
+                        class="form-control"
+                        placeholder="Quater Delivery"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="input-group">
+                      <span class="input-group-text">Savy</span>
+                      <input
+                        required
+                        type="number"
+                        name="savyMonth"
+                        class="form-control"
+                        placeholder="Month Delivery"
+                      />
+                      <input
+                        required
+                        type="number"
+                        name="savyQuarter"
+                        class="form-control"
+                        placeholder="Quater Delivery"
+                      />
+                    </div>
+                  </div>
 
-          <div class="col-md-6">
-            <div class="input-group">
-              <span class="input-group-text">End date for a Quarter</span>
-              <input
-                required
-                type="date"
-                name="endDateQuarter"
-                class="form-control"
-              />
+                  <div class="col-md-6">
+                    <div class="input-group">
+                      <input
+                        required
+                        type="number"
+                        name="plannedNumberMonth"
+                        class="form-control"
+                        placeholder="Planned Number for a Month"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="input-group">
+                      <input
+                        required
+                        type="number"
+                        name="plannedNumberQuarter"
+                        class="form-control"
+                        placeholder="Planned Number for a Quarter"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="input-group">
+                      <span class="input-group-text"
+                        >End date for a Quarter</span
+                      >
+                      <input
+                        required
+                        type="date"
+                        name="endDateQuarter"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="input-group">
+                      <input
+                        required
+                        type="text"
+                        name="quarterNumber"
+                        class="form-control"
+                        placeholder="Quarter Number (Months)"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button type="submit" name="submit" class="btn btn-primary">
+                      Submit
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <!-- form ends -->
             </div>
           </div>
-
-          <div class="col-md-6">
-            <div class="input-group">
-              <input
-                required
-                type="text"
-                name="quarterNumber"
-                class="form-control"
-                placeholder="Quarter Number (Months)"
-              />
-            </div>
-          </div>
-
-          <div class="col-12">
-            <button type="submit" name="submit" class="btn btn-primary">
-              Update
-            </button>
-          </div>
-        </form>
+        </div>
       </div>
+      <!-- Modal finishes -->
     </div>
 
     <script

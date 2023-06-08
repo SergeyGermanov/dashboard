@@ -1,9 +1,10 @@
-let colorFunc = (num) => {
-  return num >= 0 && num <= 2
+let colorFunc = (num, div) => {
+  let multiplier = div === "monthTop" ? [2, 3, 5, 6, 7] : [7, 8, 15, 16, 21];
+  return num >= 0 && num <= multiplier[0]
     ? "danger"
-    : num >= 3 && num <= 5
+    : num >= multiplier[1] && num <= multiplier[2]
     ? "warning"
-    : num >= 6 && num <= 7
+    : num >= multiplier[3] && num <= multiplier[4]
     ? "success"
     : "dark";
 };
@@ -21,7 +22,8 @@ let listComponent = (div, name, num, ind) => {
                         <div class="fw-bold">${name}</div>
                       </div>
                       <span class="badge text-bg-${colorFunc(
-                        num
+                        num,
+                        div
                       )} rounded-pill">${num}</span>`;
 
   document.querySelector(`#${div}`).appendChild(list);
