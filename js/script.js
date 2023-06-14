@@ -152,6 +152,19 @@ let updatEquarterTitle = (text) => {
   document.querySelector("#quarterTitle").textContent = text;
 };
 
+// To DO:
+// consolidate functions in one
+// update the info for the Delivered tasks and story points
+
+// "devTasksMonth",
+// "quarterTasksMonth",
+// "storyPointsMonth",
+// "storyPointsQuarter",
+// "devPlannedMonth",
+// "pointsPlannedMonth",
+// "devPlannedQuarter",
+// "pointsPlannedQuarter"
+
 let datesBetween = (date) => {
   let date1 = new Date();
   let date2 = new Date(date);
@@ -218,4 +231,9 @@ let updateFunction = () => {
   );
 
   progressComponent("progressbarMonth", datesBetween(endOfMonthDate()));
+
+  // updates the devTasks Month
+  devTasksComponent('devMonth', dataForm.devTasksMonth, dataForm.devPlannedMonth, dataForm.storyPointsMonth, dataForm.pointsPlannedMonth); 
+  // updates the devTask Quarter
+  devTasksComponent('devQuarter', dataForm.quarterTasksMonth, dataForm.devPlannedQuarter, dataForm.storyPointsQuarter, dataForm.pointsPlannedQuarter);
 };

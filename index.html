@@ -75,6 +75,11 @@
                   </blockquote>
                   <!-- card body with a list finishes -->
                 </div>
+                <!-- Devtask/Story Points -->
+                
+                <div id="devMonth"></div>
+
+                <!-- End Stroy Points -->
               </div>
             </div>
           </div>
@@ -137,6 +142,13 @@
                   <!-- card body with a list finishes -->
                 </div>
                 <!-- q card finishes -->
+
+                <!-- Devtask/Story Points -->
+
+                <div id="devQuarter"></div>
+
+               <!-- End Stroy Points -->
+
               </div>
             </div>
           </div>
@@ -380,6 +392,100 @@
                     </div>
                   </div>
 
+                  <!-- Dev Task input start -->
+
+                  <div class="col-md-6">
+                    <div class="input-group">
+                      <span class="input-group-text">Dev Tasks</span>
+                      <input
+                        required
+                        type="number"
+                        name="devTasksMonth"
+                        class="form-control"
+                        placeholder="Month Dev Delivery"
+                      />
+                      <input
+                      required
+                      type="number"
+                      name="quarterTasksMonth"
+                      class="form-control"
+                      placeholder="Quarter Dev Delivery"
+                    />
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="input-group">
+                      <span class="input-group-text">Story Points</span>
+                      <input
+                        required
+                        type="number"
+                        name="storyPointsMonth"
+                        class="form-control"
+                        placeholder="Month Points Delivery"
+                      />
+                      <input
+                      required
+                      type="number"
+                      name="storyPointsQuarter"
+                      class="form-control"
+                      placeholder="Quarter Points Delivery"
+                    />
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-6">
+                    <div class="input-group">
+                      <input
+                        required
+                        type="number"
+                        name="devPlannedMonth"
+                        class="form-control"
+                        placeholder="Planned Dev for a Month"
+                      />
+                    </div>
+                  </div>
+                
+
+                  <div class="col-md-6">
+                    <div class="input-group">
+                      <input
+                        required
+                        type="number"
+                        name="pointsPlannedMonth"
+                        class="form-control"
+                        placeholder="Planned Points for a Month"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="input-group">
+                      <input
+                        required
+                        type="number"
+                        name="devPlannedQuarter"
+                        class="form-control"
+                        placeholder="Planned Dev for a Quarter"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="input-group">
+                      <input
+                        required
+                        type="number"
+                        name="pointsPlannedQuarter"
+                        class="form-control"
+                        placeholder="Planned Points for a Quarter"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Dev Task input finish -->
+
                   <div class="modal-footer">
                     <button
                       type="button"
@@ -412,5 +518,6 @@
     <script src="./js/list.js"></script>
     <script src="./js/progressBar.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/devTasks.js"></script>
   </body>
 </html>

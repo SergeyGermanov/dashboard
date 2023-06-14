@@ -21,6 +21,15 @@ let listOfValues = [
   "plannedNumberQuarter",
   "endDateQuarter",
   "quarterNumber",
+  // new addition of Dev tasks
+  "devTasksMonth",
+  "quarterTasksMonth",
+  "storyPointsMonth",
+  "storyPointsQuarter",
+  "devPlannedMonth",
+  "pointsPlannedMonth",
+  "devPlannedQuarter",
+  "pointsPlannedQuarter"
 ];
 
 form.addEventListener("submit", (e) => {
