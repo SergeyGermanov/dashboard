@@ -5,7 +5,7 @@ const engineers = [
     connectionsQuarter: 0,
   },
   {
-    name: "Chiraag",
+    name: "Syncware",
     connectionsMonth: 0,
     connectionsQuarter: 0,
   },
@@ -20,7 +20,7 @@ const engineers = [
     connectionsQuarter: 0,
   },
   {
-    name: "Michael",
+    name: "Pipe17",
     connectionsMonth: 0,
     connectionsQuarter: 0,
   },
@@ -47,9 +47,9 @@ let addDataToObj = (data1, data2) => {
       data1[i].connectionsMonth = data2.andrewMonth;
       data1[i].connectionsQuarter = data2.andrewQuarter;
     }
-    if (o.name === "Chiraag") {
-      data1[i].connectionsMonth = data2.chiraagMonth;
-      data1[i].connectionsQuarter = data2.chiraagQuarter;
+    if (o.name === "Syncware") {
+      data1[i].connectionsMonth = data2.syncwareMonth;
+      data1[i].connectionsQuarter = data2.syncwareQuarter;
     }
     if (o.name === "Louis") {
       data1[i].connectionsMonth = data2.louisMonth;
@@ -59,9 +59,9 @@ let addDataToObj = (data1, data2) => {
       data1[i].connectionsMonth = data2.mehulMonth;
       data1[i].connectionsQuarter = data2.mehulQuarter;
     }
-    if (o.name === "Michael") {
-      data1[i].connectionsMonth = data2.michaelMonth;
-      data1[i].connectionsQuarter = data2.michaelQuarter;
+    if (o.name === "Pipe17") {
+      data1[i].connectionsMonth = data2.pipe17Month;
+      data1[i].connectionsQuarter = data2.pipe17Quarter;
     }
     if (o.name === "Rahul") {
       data1[i].connectionsMonth = data2.rahulMonth;
